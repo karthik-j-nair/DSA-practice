@@ -9,7 +9,7 @@ let distance = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 
 let copy = [...distance];
 let isEquiDistant = true;
-for (let i = 0; i < s.length; i++) {
+for (let i = 0; i < s.length - 1; i++) {
     for (let j = i + 1; j < s.length; j++) {
         if (s.charCodeAt(i) === s.charCodeAt(j)) {
             let val = j - i - 1;
