@@ -5,3 +5,24 @@
 // 1 2 3         7 4 1
 // 4 5 6   =>    8 5 2
 // 7 8 9         9 6 3
+
+let matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
+let l = matrix.length -1, m = 0;
+while(l > m) {
+
+    let temp = matrix[l];
+    matrix[l] = matrix[m];
+    matrix[m] = temp;
+    l--, m++;
+}
+
+for (let i = 0; i < matrix.length; i++) {
+    for (let j = 0; j < matrix[i].length; j++) {
+        if (j > i) {
+            let temp = matrix[j][i];
+            matrix[j][i] = matrix[i][j];
+            matrix[i][j] = temp;
+        };
+    }
+}
+console.log(matrix);
